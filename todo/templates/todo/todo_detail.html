@@ -5,12 +5,14 @@
     <title>Django Crash Course</title>
 </head>
 <body>
-{% if request.user.is_authenticated %}
-Hello, {{ request.user.username }}
-{% else %}
-Hello anonymous user!
-{% endif %}
-The todo name is :{{ todo.name }}
-The due is :{{ todo.due_date }}
+    {% if request.user.is_authenticated %}
+        Hello, {{ request.user.username }}
+    {% else %}
+        Hello anonymous user!
+    {% endif %}
+    The todo name is :{{ todo.name }}
+    The due is :{{ todo.due_date }}
+    <a href="/{{ todo.id }}/update/">Update this todo</a>
+
 </body>
 </html>
