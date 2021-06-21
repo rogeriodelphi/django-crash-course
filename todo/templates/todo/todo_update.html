@@ -6,8 +6,8 @@
         <h4>Update todo</h4>
         <form method="POST">
             {% csrf_token %}
-    <!--      <input type="text" name="name">-->
-    <!--      <input type="date" name="due_date">        -->
+<!--          <input type="text" name="name">-->
+<!--          <input type="date" name="due_date">        -->
             {{ form.as_p }}
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
